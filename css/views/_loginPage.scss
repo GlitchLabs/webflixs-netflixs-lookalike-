@@ -1,0 +1,40 @@
+.profile-selection-container{display:flex;justify-content:center; flex-direction:column;align-items:center; width:100%; min-height:calc(100vh - 65px);
+    margin-top:65px; border:5px solid red;}
+    .profile-selection-container h1{font-family:'pier_sansregular'; font-size:52px;}
+    .profile-selection-row{border:5px solid yellow;
+        background-color:olive;display:flex; flex-direction:row; justify-content:center; align-items:center;
+        margin:65px 0;
+    }
+    .profile-container{border:5px double orangered;
+        background-color:firebrick; display:flex; flex-direction:column; justify-content:flex-start;
+        align-items:center; flex:1; margin:10px 20px;
+    }
+    .profile-container .profile-bg{ display:block;width:150px;height:150px;
+        background:url('../images/kids-section.png')no-repeat center center; background-size:contain;
+        border:5px solid navy; transition: .25s ease-in-out; margin:10px 0;}
+    
+    .profile-container:nth-of-type(2) .profile-bg{background: url('../images/dog.png') no-repeat center center;
+    background-size:contain;margin:10px 0;}
+    
+    .profile-container:nth-of-type(3) .profile-bg{background: url('../images/dog.png') no-repeat center center;
+    background-size:contain;margin:10px 0;}
+    
+    .profile-container:nth-of-type(4) .profile-bg{background: url('../images/dog.png') no-repeat center center;
+    background-size:contain;margin:10px 0;}
+    
+    .profile-container:nth-of-type(5) .profile-bg{background: url('../images/dog.png') no-repeat center center;
+    background-size:contain;margin:10px 0;}
+    
+    .profile-container:hover .profile-bg{
+        border-color:white;
+    }
+    .profile-container h3{font-family: 'pier_sansregualr'; font-size:16px; color:#808080; transition: .25s ease-in-out;}
+    .profile-container:hover h3{
+        color:white;
+    }
+    .manage-profiles-button{
+        display:flex; justify-content:center; align-items:center; min-width: 250px; min-height: 40px;
+        border:1px solid #80808080; color:#80808080; padding:10px 20px; transition: all .25s ease-in-out;
+        text-transform: uppercase;letter-spacing:3.5px;
+    }
+    a.manage-profiles-button:hover{color:white;border-color:white;}

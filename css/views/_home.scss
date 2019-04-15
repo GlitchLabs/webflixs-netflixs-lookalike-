@@ -1,0 +1,19 @@
+  .featured-section{width:100%;height:0;padding-bottom:56.25%;overflow:hidden; position:relative;}
+.featured-section:after{content:'';width:100%; height:125px; position:absolute; bottom:0; left: 0;
+    z-index:10;background:linear-gradient(to top, #141414,transparent);}
+.featured-section video{width:100%;height:100%; position:absolute; top:0; left:0;
+    z-index: -1;}
+div .button-section{border:5px solid yellow; height:100%; width:100%;
+position: relative;}
+div .buttons-container{display:flex;justify-content:center;
+    border:5px solid green;position:absolute;
+}
+section .movie-gallery{ border:5px solid yellowgreen;z-index:100;width:100%;height:100%;}
+
+.new-release-section{border:5px solid red ;z-index:100;width:100%;height:100%; position:relative;}
+
+.new-release-container{border:5px solid white; width:100%; height:100%;}
+.new-release-row-container{display:flex; border:5px solid blue; width:100%; height:100%; }
+.movie-poster{display:block;width:150px;height:150px;
+    background:url('../images/kids-section.png')no-repeat center center; background-size:contain;
+    border:5px solid navy; transition: .25s ease-in-out; margin:10px 0;z-index: 100;}

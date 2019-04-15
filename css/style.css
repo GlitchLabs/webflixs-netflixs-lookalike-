@@ -1,119 +1,301 @@
-/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; } /* HTML5 display-role reset for older browsers */ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; } body { line-height: 1; } ol, ul { list-style: none; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; } table { border-collapse: collapse; border-spacing: 0; }
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-color: #141414;
+  font-family: "pier_sansregular";
+  color: whitesmoke;
+  font-size: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*width and padding thing padding wont change width */
+main {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+}
 
 /* Fonts */
 @font-face {
-    font-family: 'pier_sanslight';
-    src: url('../fonts/pier-sans/piersans-light-webfont.woff2') format('woff2'),
-         url('../fonts/pier-sans/piersans-light-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: "pier_sanslight";
+  src: url("../fonts/pier-sans/piersans-light-webfont.woff2") format("woff2"), url("../fonts/pier-sans/piersans-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
-
 @font-face {
-    font-family: 'pier_sansregular';
-    src: url('../fonts/pier-sans/piersans-regular-webfont.woff2') format('woff2'),
-         url('../fonts/pier-sans/piersans-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: "pier_sansregular";
+  src: url("../fonts/pier-sans/piersans-regular-webfont.woff2") format("woff2"), url("../fonts/pier-sans/piersans-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
-
 @font-face {
-    font-family: 'pier_sansmedium';
-    src: url('../fonts/pier-sans/piersans-medium-webfont.woff2') format('woff2'),
-         url('../fonts/pier-sans/piersans-medium-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: "pier_sansmedium";
+  src: url("../fonts/pier-sans/piersans-medium-webfont.woff2") format("woff2"), url("../fonts/pier-sans/piersans-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
-
 @font-face {
-    font-family: 'pier_sansbold';
-    src: url('../fonts/pier-sans/piersans-bold-webfont.woff2') format('woff2'),
-         url('../fonts/pier-sans/piersans-bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: "pier_sansbold";
+  src: url("../fonts/pier-sans/piersans-bold-webfont.woff2") format("woff2"), url("../fonts/pier-sans/piersans-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
-
 @font-face {
-    font-family: 'pier_sansblack';
-    src: url('../fonts/pier-sans/piersans-black-webfont.woff2') format('woff2'),
-         url('../fonts/pier-sans/piersans-black-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: "pier_sansblack";
+  src: url("../fonts/pier-sans/piersans-black-webfont.woff2") format("woff2"), url("../fonts/pier-sans/piersans-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
-body{
-    background-color:#141414;font-family:'pier_sansregular'; color:whitesmoke;font-size:14px;
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 60px;
+  background-color: transparent;
 }
-*{box-sizing:border-box;} /*width and padding thing padding wont change width */
 
-header{
-display:flex; flex-direction:row; justify-content:flex-start; align-items:center; width:100%; height:65px;
-position:fixed; top:0; left:0; padding:0 60px;background-color:transparent;
+header a.header-logo .logo {
+  display: block;
+  width: 92px;
+  height: 55px;
+  background: url("../images/netflix-logo.svg") no-repeat center center;
+  background-size: contain;
+  will-change: transform;
+  transition: 0.25s ease-in-out;
+  margin-right: 40px;
 }
-header a.header-logo .logo{ display:block; width:92px; height:55px;
-background:url('../images/netflix-logo.svg')no-repeat center center; background-size:contain;
-will-change:transform; transition:.25s ease-in-out; margin-right:40px;}
 
-header ul{display:flex; flex-direction:row;}
-header ul li a {color:white;font-size:14px; padding:0 10px; text-decoration:none;}
-
-header .secondary-links-container i .search-icon{margin-right:50px;}
-
-header .secondary-links-container{display:flex;flex-direction:row;justify-content:flex-end;align-items:center; margin:0 0 0 auto;}
-
-header a.header-logo .logo:hover{transform:scale(1.5)}
-
-main{width:100%; max-width:1200px; height: auto; margin: 0 auto;}
-
-.profile-selection-container{display:flex;justify-content:center; flex-direction:column;align-items:center; width:100%; min-height:calc(100vh - 65px);
-margin-top:65px;}
-.profile-selection-container h1{font-family:'pier_sansregular'; font-size:52px;}
-.profile-selection-row{
-    background-color:olive;display:flex; flex-direction:row; justify-content:center; align-items:center;
-    margin:65px 0;
+header ul {
+  display: flex;
+  flex-direction: row;
 }
-.profile-container{
-    background-color:firebrick; display:flex; flex-direction:column; justify-content:flex-start;
-    align-items:center; flex:1; margin:10px 20px;
+
+header ul li a {
+  color: white;
+  font-size: 14px;
+  padding: 0 10px;
+  text-decoration: none;
 }
-.profile-container .profile-bg{ display:block;width:150px;height:150px;
-    background:url('../images/kids-section.png')no-repeat center center; background-size:contain;
-    border:5px solid navy; transition: .25s ease-in-out; margin:10px 0;}
 
-.profile-container:nth-of-type(2) .profile-bg{background: url('../images/dog.png') no-repeat center center;
-background-size:contain;margin:10px 0;}
-
-.profile-container:nth-of-type(3) .profile-bg{background: url('../images/dog.png') no-repeat center center;
-background-size:contain;margin:10px 0;}
-
-.profile-container:nth-of-type(4) .profile-bg{background: url('../images/dog.png') no-repeat center center;
-background-size:contain;margin:10px 0;}
-
-.profile-container:nth-of-type(5) .profile-bg{background: url('../images/dog.png') no-repeat center center;
-background-size:contain;margin:10px 0;}
-
-.profile-container:hover .profile-bg{
-    border-color:white;
+header .secondary-links-container i .search-icon {
+  margin-right: 50px;
 }
-.profile-container h3{font-family: 'pier_sansregualr'; font-size:16px; color:#808080; transition: .25s ease-in-out;}
-.profile-container:hover h3{
-    color:white;
-}
-.manage-profiles-button{
-    display:flex; justify-content:center; align-items:center; min-width: 250px; min-height: 40px;
-    border:1px solid #80808080; color:#80808080; padding:10px 20px; transition: all .25s ease-in-out;
-    text-transform: uppercase;letter-spacing:3.5px;
-}
-a.manage-profiles-button:hover{color:white;border-color:white;}
 
-.featured-section{
-    width:100%;height:0;padding-bottom:56.25%;overflow:hidden; position:relative;}
+header .secondary-links-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 0 0 auto;
+}
 
-.featured-section:after{content:'';width:100%; height:125px; position:absolute; bottom:0; left: 0;
-z-index: 10;background:linear-gradient(to top, #141414,transparent);}
-.featured-section video{width:100%;height:100%; position:absolute; top:0; left:0;
-z-index: -1;}
+header a.header-logo .logo:hover {
+  transform: scale(1.5);
+}
+
+.featured-section {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  position: relative;
+}
+
+.featured-section:after {
+  content: "";
+  width: 100%;
+  height: 125px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background: linear-gradient(to top, #141414, transparent);
+}
+
+.featured-section video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+div .button-section {
+  border: 5px solid yellow;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+div .buttons-container {
+  display: flex;
+  justify-content: center;
+  border: 5px solid green;
+  position: absolute;
+}
+
+section .movie-gallery {
+  border: 5px solid yellowgreen;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+}
+section .movie-gallery .new-release-container {
+  border: 5px solid white;
+  width: 100%;
+  height: 100%;
+}
+
+.profile-selection-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: calc(100vh - 65px);
+  margin-top: 65px;
+  border: 5px solid red;
+}
+
+.profile-selection-container h1 {
+  font-family: "pier_sansregular";
+  font-size: 52px;
+}
+
+.profile-selection-row {
+  border: 5px solid yellow;
+  background-color: olive;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 65px 0;
+}
+
+.profile-container {
+  border: 5px double orangered;
+  background-color: firebrick;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1;
+  margin: 10px 20px;
+}
+
+.profile-container .profile-bg {
+  display: block;
+  width: 150px;
+  height: 150px;
+  background: url("../images/kids-section.png") no-repeat center center;
+  background-size: contain;
+  border: 5px solid navy;
+  transition: 0.25s ease-in-out;
+  margin: 10px 0;
+}
+
+.profile-container:nth-of-type(2) .profile-bg {
+  background: url("../images/dog.png") no-repeat center center;
+  background-size: contain;
+  margin: 10px 0;
+}
+
+.profile-container:nth-of-type(3) .profile-bg {
+  background: url("../images/dog.png") no-repeat center center;
+  background-size: contain;
+  margin: 10px 0;
+}
+
+.profile-container:nth-of-type(4) .profile-bg {
+  background: url("../images/dog.png") no-repeat center center;
+  background-size: contain;
+  margin: 10px 0;
+}
+
+.profile-container:nth-of-type(5) .profile-bg {
+  background: url("../images/dog.png") no-repeat center center;
+  background-size: contain;
+  margin: 10px 0;
+}
+
+.profile-container:hover .profile-bg {
+  border-color: white;
+}
+
+.profile-container h3 {
+  font-family: "pier_sansregualr";
+  font-size: 16px;
+  color: #808080;
+  transition: 0.25s ease-in-out;
+}
+
+.profile-container:hover h3 {
+  color: white;
+}
+
+.manage-profiles-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 250px;
+  min-height: 40px;
+  border: 1px solid #80808080;
+  color: #80808080;
+  padding: 10px 20px;
+  transition: all 0.25s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+}
+
+a.manage-profiles-button:hover {
+  color: white;
+  border-color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
